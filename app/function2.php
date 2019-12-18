@@ -279,7 +279,7 @@ function ProfileComplete($firstname,$lastname,$phonenumber,$bankname,$accountnum
                 'accountNum' => $accountNum,
                 'status' => 1)
 );
-     
+   }  
     }else{
        DB::table('bank')->insert(
                array('userid' => $user_id,
