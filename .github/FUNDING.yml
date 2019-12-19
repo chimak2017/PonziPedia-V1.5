@@ -1,5 +1,6 @@
 # These are supported funding model platforms
 
-github: olakunlevpn
-bitcoin: 1HBPEwFccDGUw4pYDNxGsrMVTJZ9hWbbpK
-ethereum: 0xdCB16FDf452994E8778D0713b96A1E02Bfb5728a | Olakunlevpn
+custom: [
+'https://www.blockchain.com/btc/address/1HBPEwFccDGUw4pYDNxGsrMVTJZ9hWbbpK',
+'https://etherscan.io/address/0xdCB16FDf452994E8778D0713b96A1E02Bfb5728a'
+]
