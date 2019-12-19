@@ -280,6 +280,8 @@ function packagesView()
 {
 $settings = DB::table('settings')->where('id', 1)->first();
 	$packages =DB::table('packages')->orderBy('id', 'DESC')->get();
+ if ($packages) {
+   
 
 	foreach ($packages as $row) {
     $settings = DB::table('settings')->where('id', 1)->first();
@@ -313,7 +315,11 @@ $settings = DB::table('settings')->where('id', 1)->first();
                     </div>
                 </div>';
 	}
-
+}else{
+   echo '<div class="alert alert-danger" role="alert">
+ Currently we dont have available packages, please wait for some moment or contact support for assistance.
+</div>';
+}
 }
 
 
