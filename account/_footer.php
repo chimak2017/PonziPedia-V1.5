@@ -3,27 +3,28 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-sm-6">
-                  <p>&copy; <?php echo date('Y', time()) . ' ' . Config::get('app.name'); ?> All Right Reserved  |   API Version <?php echo Config::get('app.version'); ?></p>
+                  <p>©  <?php echo date('Y').' '.Config::get('app.name'); ?> All Right Reserved  |   API Version <?php echo Config::get('app.version'); ?></p>
                 </div>
                 <div class="col-sm-6 text-right">
-                 <p>Design by <a href="https://olakunlevpn.com" class="external">Olakunlevpn</a></p>
+                 <p>Design by <a href="#" class="external">MayLancer</a></p>
+                  <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
                 </div>
               </div>
             </div>
-          </footer>
+          </footer> 
         </div>
       </div>
     </div>
     <!-- JavaScript files-->
 
-
-
+    
+    
         <!-- Rest of the code <--></-->
-
+   
     <script src="<?php echo asset_url('May/vendor/popper.js/umd/popper.min.js') ?>"> </script>
     <script src="<?php echo asset_url('May/vendor/bootstrap/js/bootstrap.min.js') ?>"></script>
-<script src="<?php echo asset_url('May/js/front.js') ?>"></script>
-
+<script src="<?php echo asset_url('May/js/front.js') ?>"></script>    
+   
      <div id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
                         <div role="document" class="modal-dialog">
                           <div class="modal-content">
@@ -38,11 +39,11 @@
                                   <label>Email</label>
                                   <input type="email" placeholder="Email Address" class="form-control">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group">       
                                   <label>Password</label>
                                   <input type="password" placeholder="Password" class="form-control">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group">       
                                   <input type="submit" value="Signin" class="btn btn-primary">
                                 </div>
                               </form>

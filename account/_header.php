@@ -288,6 +288,11 @@ right connector from last child*/
                     <li><a href="../admin.php"> <i class="fa fa-cog"></i>Admin Panel </a>
                     </li>
                   <?php endif ?>
+
+                   <?php if ($demoSet =1): ?>
+                    <li><a href="../docs" target="_BLANK"> <i class="fa fa-code"></i>Documentation </a>
+                    </li>
+                  <?php endif ?>
                     </li>
                     <li <?php if ($page == 'discussion.php') { ?>class="active"<?php } ?>><a href="discussion.php"> <i class="fa fa-comments"></i>Discussion <span class="badge bg-red badge-corner"><?php CommentSCount() ?></span></a>
                       
