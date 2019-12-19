@@ -175,4 +175,6 @@ Internationalization (optional)<br>
 
 This application was created for educational purposes only. It is forbidden to copy, sell and distribute this application in any way. The principle behind this application remains illegal and it is forbidden to make any real use of it. If you decide to break the law, only you can be held responsible and you can ``not`` deny the fact.
         </div>
+        
+ [![Donate BTC](https://img.shields.io/badge/donate-BTC-ff9900.svg)](https://blockchain.info/address/1HBPEwFccDGUw4pYDNxGsrMVTJZ9hWbbpK) [![Donate ETH](https://img.shields.io/badge/donate-ETH-3C3C3D.svg)](https://etherscan.io/address/0xdCB16FDf452994E8778D0713b96A1E02Bfb5728a)
       
