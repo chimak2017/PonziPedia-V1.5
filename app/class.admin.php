@@ -9,7 +9,7 @@
 // | Copyright (c) 2018 PonziPedia. All rights reserved.
 // +------------------------------------------------------------------------+
  
-$demoSet =0;
+$demoSet =1;
 
 if ($demoSet ==1) {
 
@@ -22,7 +22,7 @@ if ($demoSet ==1) {
    if (isset($_POST['submit']) || isset($_POST['margeNow']) || isset($_POST['Deletesubmit']) || isset($_POST['SetMargin']) || isset($_POST['UnsetMargin']) || isset($_POST['SingleMail'])  || isset($_POST['MassMail']) || isset($_POST['ConfirmPayment']) || isset($_POST['SetReceiver']) || isset($_POST['DisengageNow']) || isset($_POST['SetMargin']) || isset($_POST['UnsetMargin']) || isset($_POST['MessageSubmit'])){
     echo ' <div class="alert alert-danger alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                <strong>Oh snap!</strong> You are on demo view and you cant make changes, please purchase PonziPedia to have full right to make changes.
+                <strong>Oh snap!</strong> You are on demo view and you cant make changes, please purchase PonziPedia to have full right to make changes. support olakunleips@gmail.com
             </div>';
             exit;
    }
@@ -58,23 +58,24 @@ $difference = $now - $thenTimestamp;
 
 	$users = DB::table('users')->where('id', $row->userid)->first();
 	$user = DB::table('userdetails')->where('userid', $row->userid)->first();
-		echo '<tr>
-				<th><input type="checkbox" class="select-all" value="1"></th>
-				<td>'.$users->username.'</td>
-				<td>'.$user->accountname.'</td>
-				<td>'.$settings->currency.''.$row->amount.'</td>
-				<td>'.$settings->currency.''.$row->balance.'</td> 
+  if ($user) {
+    echo '<tr>
+        <th><input type="checkbox" class="select-all" value="1"></th>
+        <td>'.$users->username.'</td>
+        <td>'.$user->accountname.'</td>
+        <td>'.$settings->currency.''.$row->amount.'</td>
+        <td>'.$settings->currency.''.$row->balance.'</td> 
         
-				<td>'.$row->status.'</td>
+        <td>'.$row->status.'</td>
         <td>'.$TimeX.'</td>
-				<td><form method="POST" action="">
+        <td><form method="POST" action="">
            <input type="hidden" name="id" value="'.$row->id.'">
            <input type="submit" name="delete" value="Delete" class="btn btn-danger btn-sm ">
            </form></td>
-				<td><a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$row->id.'"><button class="btn btn-primary">Marge</button></a></td>
-			</tr>
+        <td><a data-toggle="collapse" data-parent="#accordion" href="#collapse'.$row->id.'"><button class="btn btn-primary">Marge</button></a></td>
+      </tr>
 
-			 <div id="collapse'.$row->id.'" class="panel-collapse collapse">
+       <div id="collapse'.$row->id.'" class="panel-collapse collapse">
       <div class="panel-body">
       <h1>Create Margin Manual ('.$users->username.')</h1>
       <form role="form" method="POST" action="" class="col-md-4">
@@ -108,6 +109,8 @@ $difference = $now - $thenTimestamp;
       </div>
     </div>
   </div>';
+  }
+		
 	}
 }
 
