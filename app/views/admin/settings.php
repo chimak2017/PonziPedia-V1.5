@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 				<label for="debug">Marging Settings </label>
 				<select name="margintype" class="form-control">
 	        		<option value="1" <?php echo $settings->margintype == '1' ? 'selected':'' ?>><?php _e('admin.yes') ?></option>
-	        		<option value="0" <?php echo $settings->margintype == '2' ? 'selected':'' ?>><?php _e('admin.no') ?></option>
+	        		<option value="0" <?php echo $settings->margintype == '0' ? 'selected':'' ?>><?php _e('admin.no') ?></option>
 				</select>
 				<p class="help-block">Yes|No the setting automatic Margin is Yes and NO means Setting to Manual Margin</p>
 			</div>
